@@ -1,0 +1,18 @@
+body {
+  background-color: #13adab;
+  font-family: "Titan One", cursive;
+}
+.card {
+  background-color: #526166;
+}
+.mini {
+  text-align: center;
+  margin: 13px;
+}
+h1,
+form {
+  padding-left: 30px;
+}
+div .card .mini {
+  background-color: #ffd604;
+}

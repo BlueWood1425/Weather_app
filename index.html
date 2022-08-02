@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <title>Wether</title>
+  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="index.js">
+</head>
+<body>
+  <div class="container" style=" padding: 30px;">
+    <div class="card" style="display: block;">
+      <hr />
+          <form id="searching">
+            <input tupe="text" id="cityForm" placeholder="Enter your city">
+            <input type="submit" value="Search">
+            <input type="submit" id="geolocationButton" value="Geolocation">
+          </form>
+        </p>
+      <p>
+          <h1  style="display: flex; flex-direction: column">
+          <span id="city" class="location">Kyiv</span>
+          <span>🌤<span id="math" class="temperatyreL">19</span>° 
+            <a href="#" id="C">C</a>
+            /
+            <a href="#" id="F">F</a>
+           </span>
+          <span id="time">Thursday 12:12</span>
+        </h1>
+      </p>
+      <div class="row">
+        <div class="col-2 card mini" style="height: 150px; width: 150px; margin-left: 30px;">
+          <h3>
+            Friday
+            <div class="mini">🌤</div>
+            21°C
+          </h3>
+        </div>
+        <div class="col-2 card mini" style="width: 150px; margin-left: 30px;">
+          <h3>
+            Saturday
+            <div class="mini">☀</div>
+            21°C
+          </h3>
+        </div>
+        <div class="col-2 card mini" style="width: 150px; margin-left: 30px;">
+          <h3>
+            Sunday
+            <div class="mini">🌦</div>
+            20°C
+          </h3>
+        </div>
+        <div class="col-2 card mini" style="width: 150px; height: auto; margin-left: 30px;">
+          <h3>
+            Monday
+            <div class="mini">🌧</div>
+            19°C
+          </h3>
+        </div>
+        <div class="col-2 card mini" style="width: 150px; margin-left: 30px;">
+          <h3>
+            Tuesday
+            <div class="mini">🌤</div>
+            30°C
+          </h3>
+        </div>
+        <div class="col-2 card mini" style="height: 150px; width: auto; margin-left: 30px;">
+          <h3>
+            Wednesday
+            <div class="mini">⚡</div>
+            17°C
+          </h3>
+        </div>
+      </div>
+      <hr />
+    </div>
+  </div>
+  <div class="container">
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  </body>
+</html>
