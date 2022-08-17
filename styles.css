@@ -16,3 +16,16 @@ form {
 div .card .mini {
   background-color: #ffd604;
 }
+
+.units {
+  position: relative;
+  top: -42px;
+}
+
+.picture {
+  padding-bottom: 40px;
+}
+
+small:first-letter {
+  text-transform: capitalize;
+}

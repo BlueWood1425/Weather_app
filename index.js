@@ -1,3 +1,24 @@
+function formatDate(date) {
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let hours = now.getHours();
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let currentDay = days[now.getDay()];
+  let time = document.querySelector(`#time`);
+  time.innerHTML = ` ${currentDay} ${hours} : ${minutes}`;
+}
 function temp(response) {
   let location = document.querySelector(`.location`);
   let temperatureL = document.querySelector(`.temperatyreL`);
@@ -24,28 +45,6 @@ geolocationClick.addEventListener("click", geolocationPosition);
 
 let now = new Date();
 
-function formatDate(date) {
-  let minutes = now.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  let hours = now.getHours();
-
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-
-  let currentDay = days[now.getDay()];
-  let time = document.querySelector(`#time`);
-  time.innerHTML = ` ${currentDay} ${hours} : ${minutes}`;
-}
-
 formatDate();
 
 function search(event) {
@@ -65,27 +64,44 @@ function geolocation(event) {
 let searchForm = document.querySelector("#searching");
 searchForm.addEventListener("submit", search);
 
-function clickFahrenheit(event) {
-  event.preventDefault();
-  let F = document.querySelector(`#F`);
-  math.innerHTML = `66`;
-}
-let clickF = document.querySelector(`#F`);
-clickF.addEventListener("click", clickFahrenheit);
+//////////////////////////////////////
 
-function clickСelsius(event) {
+function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let C = document.querySelector(`#C`);
-  math.innerHTML = `19`;
+  let temperature = document.querySelector(".temperatyreL");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperature.innerHTML = Math.round(fahrenheitTemperature);
 }
-let clickC = document.querySelector(`#C`);
-clickC.addEventListener("click", clickСelsius);
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperature = document.querySelector(".temperatyreL");
+  temperature.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector(`#F`);
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector(`#C`);
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+//////////////////////////////////////
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#math").innerHTML = Math.round(
     response.data.main.temp
   );
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {

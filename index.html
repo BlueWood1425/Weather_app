@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <title>Wether</title>
+  <title>Weather</title>
   <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,16 +24,28 @@
             <input type="submit" value="Search">
             <input type="submit" id="geolocationButton" value="Geolocation">
           </form>
-        </p>
       <p>
           <h1  style="display: flex; flex-direction: column">
-          <span id="city" class="location">Kyiv</span>
-          <span>🌤<span id="math" class="temperatyreL">19</span>° 
-            <a href="#" id="C">C</a>
+          <span id="city" class="location"></span>
+          <small>
+          <span id="description"></span>
+          </small>
+          <span id="time"></span>
+          <span>
+            <img 
+            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+            alt="iconWeather"
+            id="icon"
+            class="picture"
+            >
+            <span id="math" class="temperatyreL" style="font-size: 90px;"></span> 
+            <small class="units">
+              °
+              <a href="#" id="C">C</a>
             /
             <a href="#" id="F">F</a>
+            </small>
            </span>
-          <span id="time">Thursday 12:12</span>
         </h1>
       </p>
       <div class="row">
