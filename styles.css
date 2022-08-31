@@ -9,6 +9,11 @@ body {
   text-align: center;
   margin: 13px;
 }
+
+h3 {
+  padding-top: 8px;
+}
+
 h1,
 form {
   padding-left: 30px;
@@ -28,4 +33,18 @@ div .card .mini {
 
 small:first-letter {
   text-transform: capitalize;
+}
+
+.weather-forecast-temperatur-min {
+  color: rgb(43, 43, 50);
+}
+
+.weather-forecast-temperatur-min,
+.weather-forecast-temperatur-max {
+  font-size: 20px;
+}
+
+.smallPicture {
+  width: 45px;
+  height: auto;
 }
