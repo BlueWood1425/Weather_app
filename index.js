@@ -153,6 +153,9 @@ function displayWeatherCondition(response) {
   );
   celsiusTemperature = response.data.main.temp;
 
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+
   getForecast(response.data.coord);
 }
 
