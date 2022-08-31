@@ -2,6 +2,7 @@ body {
   background-color: #13adab;
   font-family: "Titan One", cursive;
 }
+
 .card {
   background-color: #526166;
 }
@@ -40,8 +41,9 @@ small:first-letter {
 }
 
 .weather-forecast-temperatur-min,
-.weather-forecast-temperatur-max {
-  font-size: 20px;
+.weather-forecast-temperatur-max,
+.weather-forecast-temperature-day {
+  font-size: 27.3px;
 }
 
 .smallPicture {
